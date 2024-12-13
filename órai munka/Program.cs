@@ -19,7 +19,12 @@ namespace órai_munka
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Ennyi páros szám van: " + F02(szamok));
-        }
+
+			double[] szamok2 = { 2.4, 4.5, 6.7, 4.8, 6.6 };
+			Console.WriteLine();
+			Console.WriteLine();
+			Console.WriteLine("Az átlag: " + F03(szamok2));
+		}
 
 		static void F01()
 		{
@@ -47,5 +52,19 @@ namespace órai_munka
 			}
 			return szamlalo;
 		}
+		
+		
+		static double F03(double[] tomb3)
+		{
+			Console.WriteLine("Harmadik feladat:");
+			double atlag = 0;
+			for (int i = 0;i < tomb3.Length; i++)
+			{
+				atlag += tomb3[i];
+			}
+			atlag /= tomb3.Length;
+			return atlag;
+		}
 	}
+
 }
